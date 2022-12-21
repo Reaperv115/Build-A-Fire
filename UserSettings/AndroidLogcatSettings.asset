@@ -17,24 +17,6 @@
         {
             "deviceId": "RFCRC14DRAL",
             "name": "com.DefaultCompany.BuildAFire",
-            "processId": 4053,
-            "exited": true
-        },
-        {
-            "deviceId": "RFCRC14DRAL",
-            "name": "com.DefaultCompany.BuildAFire",
-            "processId": 5978,
-            "exited": true
-        },
-        {
-            "deviceId": "RFCRC14DRAL",
-            "name": "com.DefaultCompany.BuildAFire",
-            "processId": 6840,
-            "exited": true
-        },
-        {
-            "deviceId": "RFCRC14DRAL",
-            "name": "com.DefaultCompany.BuildAFire",
             "processId": 7811,
             "exited": true
         },
@@ -42,7 +24,19 @@
             "deviceId": "RFCRC14DRAL",
             "name": "com.DefaultCompany.BuildAFire",
             "processId": 8576,
-            "exited": false
+            "exited": true
+        },
+        {
+            "deviceId": "RFCRC14DRAL",
+            "name": "com.DefaultCompany.BuildAFire",
+            "processId": 11061,
+            "exited": true
+        },
+        {
+            "deviceId": "RFCRC14DRAL",
+            "name": "com.DefaultCompany.BuildAFire",
+            "processId": 32097,
+            "exited": true
         }
     ],
     "m_Tags": {

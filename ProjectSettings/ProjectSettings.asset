@@ -12,7 +12,7 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
+  companyName: GLITCGaming
   productName: Build A Fire
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -848,7 +848,7 @@ PlayerSettings:
   cloudProjectId: 0745ad16-8112-495b-a951-f1e09d980f62
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: Fired Up
+  projectName: Build A Fire
   organizationId: reaper115
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
