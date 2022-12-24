@@ -1,42 +1,54 @@
 {
     "m_SelectedDeviceId": "RFCRC14DRAL",
     "m_SelectedPackage": {
-        "deviceId": "",
-        "name": "",
-        "processId": 0,
+        "deviceId": "RFCRC14DRAL",
+        "name": "com.GLITCGaming.BuildAFire",
+        "processId": 29174,
         "exited": false
     },
     "m_SelectedPriority": 0,
     "m_KnownPackagesForSerialization": [
         {
             "deviceId": "RFCRC14DRAL",
+            "name": "com.GLITCGaming.BuildAFire",
+            "processId": 1626,
+            "exited": true
+        },
+        {
+            "deviceId": "RFCRC14DRAL",
+            "name": "com.GLITCGaming.BuildAFire",
+            "processId": 11151,
+            "exited": true
+        },
+        {
+            "deviceId": "RFCRC14DRAL",
             "name": "com.teslacoilsw.launcher",
-            "processId": 6982,
+            "processId": 6605,
             "exited": false
         },
         {
             "deviceId": "RFCRC14DRAL",
-            "name": "com.DefaultCompany.BuildAFire",
-            "processId": 7811,
+            "name": "com.GLITCGaming.BuildAFire",
+            "processId": 21119,
             "exited": true
         },
         {
             "deviceId": "RFCRC14DRAL",
-            "name": "com.DefaultCompany.BuildAFire",
-            "processId": 8576,
+            "name": "com.GLITCGaming.BuildAFire",
+            "processId": 22520,
             "exited": true
         },
         {
             "deviceId": "RFCRC14DRAL",
-            "name": "com.DefaultCompany.BuildAFire",
-            "processId": 11061,
-            "exited": true
+            "name": "com.GLITCGaming.BuildAFire",
+            "processId": 32217,
+            "exited": false
         },
         {
             "deviceId": "RFCRC14DRAL",
-            "name": "com.DefaultCompany.BuildAFire",
-            "processId": 32097,
-            "exited": true
+            "name": "com.GLITCGaming.BuildAFire",
+            "processId": 29174,
+            "exited": false
         }
     ],
     "m_Tags": {

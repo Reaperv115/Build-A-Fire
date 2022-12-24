@@ -20,7 +20,7 @@ public class InitAds : MonoBehaviour, IUnityAdsInitializationListener
     {
         var gameId = AndroidGameId;
         Advertisement.Initialize(gameId, testMode, this);
-        Advertisement.Banner.SetPosition(BannerPosition.BOTTOM_CENTER);
+        Advertisement.Banner.SetPosition(BannerPosition.TOP_CENTER);
     }
 
     // Update is called once per frame
