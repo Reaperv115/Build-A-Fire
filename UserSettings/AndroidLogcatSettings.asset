@@ -10,32 +10,32 @@
     "m_KnownPackagesForSerialization": [
         {
             "deviceId": "RFCRC14DRAL",
-            "name": "com.GLITCGaming.BuildAFire",
-            "processId": 32348,
-            "exited": true
-        },
-        {
-            "deviceId": "RFCRC14DRAL",
             "name": "com.teslacoilsw.launcher",
-            "processId": 7868,
+            "processId": 7139,
             "exited": false
         },
         {
             "deviceId": "RFCRC14DRAL",
             "name": "com.GLITCGaming.BuildAFire",
-            "processId": 1576,
+            "processId": 23377,
             "exited": true
         },
         {
             "deviceId": "RFCRC14DRAL",
             "name": "com.GLITCGaming.BuildAFire",
-            "processId": 21370,
+            "processId": 23892,
             "exited": true
         },
         {
             "deviceId": "RFCRC14DRAL",
             "name": "com.GLITCGaming.BuildAFire",
-            "processId": 22815,
+            "processId": 24677,
+            "exited": true
+        },
+        {
+            "deviceId": "RFCRC14DRAL",
+            "name": "com.GLITCGaming.BuildAFire",
+            "processId": 25531,
             "exited": true
         }
     ],

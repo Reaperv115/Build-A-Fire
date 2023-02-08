@@ -58,7 +58,9 @@ public class MoveCamera : MonoBehaviour
     {
         if (tooClose)
         {
-            rb.AddForce(t * speed * Time.deltaTime);
+            float rbSpeeed = 1000f;
+            rb.AddForce(t * rbSpeeed * Time.deltaTime);
+            transform.Translate(t * speed * Time.deltaTime);
         }
         else
             transform.Translate(t * speed * Time.deltaTime);
