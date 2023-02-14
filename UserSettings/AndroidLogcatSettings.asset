@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "RFCRC14DRAL",
         "name": "com.GLITCGaming.BuildAFire",
-        "processId": 4424,
+        "processId": 10214,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -48,6 +48,24 @@
             "deviceId": "RFCRC14DRAL",
             "name": "com.GLITCGaming.BuildAFire",
             "processId": 4424,
+            "exited": false
+        },
+        {
+            "deviceId": "RFCRC14DRAL",
+            "name": "com.GLITCGaming.BuildAFire",
+            "processId": 6862,
+            "exited": false
+        },
+        {
+            "deviceId": "RFCRC14DRAL",
+            "name": "com.GLITCGaming.BuildAFire",
+            "processId": 9253,
+            "exited": false
+        },
+        {
+            "deviceId": "RFCRC14DRAL",
+            "name": "com.GLITCGaming.BuildAFire",
+            "processId": 10214,
             "exited": false
         }
     ],

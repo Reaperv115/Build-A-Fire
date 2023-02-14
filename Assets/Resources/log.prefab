@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7977011877159090103}
   - component: {fileID: 3373862975034581933}
   - component: {fileID: 6768285296621866395}
-  - component: {fileID: 4016986778221011808}
+  - component: {fileID: 620030320095453116}
   m_Layer: 0
   m_Name: log
   m_TagString: Untagged
@@ -64,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0f19fac1172927a49a56e2b6c0ef2f71, type: 2}
+  - {fileID: 2100000, guid: 3ad5645eb09bf2246bb46afceeb6210b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -136,7 +136,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
---- !u!114 &4016986778221011808
+--- !u!114 &620030320095453116
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -145,6 +145,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 966513767558339810}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07e9fb51460482442bf0993138dff7ef, type: 3}
+  m_Script: {fileID: 11500000, guid: 03b3152da78e7e546b1c1f83ba85c3ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
