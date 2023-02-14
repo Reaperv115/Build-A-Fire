@@ -13,10 +13,12 @@ public class MoveCamera : MonoBehaviour
     Quaternion deltaRotation;
     RaycastHit hit;
     Rigidbody rb;
+    CharacterController characterController;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        characterController = GetComponent<CharacterController>();
         tooClose = false;
     }
     void Update()
@@ -32,7 +34,6 @@ public class MoveCamera : MonoBehaviour
                 if (touch.phase.Equals(TouchPhase.Ended))
                 {
                     isMoving = false;
-                    rb.velocity = Vector3.zero;
                 }
                 
             }
@@ -44,7 +45,6 @@ public class MoveCamera : MonoBehaviour
         Debug.DrawRay(transform.position, Vector3.down * 40f, Color.blue, Mathf.Infinity);
         Debug.DrawRay(transform.position, Vector3.left * 40f, Color.blue, Mathf.Infinity);
         Debug.DrawRay(transform.position, Vector3.right * 40f, Color.blue, Mathf.Infinity);
-        CollisionDetection();
     }
 
     // Update is called once per frame
@@ -56,65 +56,17 @@ public class MoveCamera : MonoBehaviour
 
     void Move(Vector3 t)
     {
-        if (tooClose)
-        {
-            float rbSpeeed = 1000f;
-            rb.AddForce(t * rbSpeeed * Time.deltaTime);
-            transform.Translate(t * speed * Time.deltaTime);
-        }
-        else
-            transform.Translate(t * speed * Time.deltaTime);
-    }
-
-    void CollisionDetection()
-    {
-        if (Physics.Raycast(transform.position, Vector3.up, out hit, 40f, mask))
-        {
-            float distance = Vector3.Distance(transform.position, hit.point);
-            Debug.Log(hit.transform.name);
-            Debug.Log(distance);
-            if (distance < 2f)
-            {
-                tooClose = true;
-            }
-            else
-                tooClose = false;
-        }
-        if (Physics.Raycast(transform.position, Vector3.down, out hit, 40f, mask))
-        {
-            float distance = Vector3.Distance(transform.position, hit.point);
-            Debug.Log(hit.transform.name);
-            Debug.Log(distance);
-            if (distance < 2f)
-            {
-                tooClose = true;
-            }
-            else
-                tooClose = false;
-        }
-        if (Physics.Raycast(transform.position, Vector3.left, out hit, 40f, mask))
-        {
-            float distance = Vector3.Distance(transform.position, hit.point);
-            Debug.Log(hit.transform.name);
-            Debug.Log(distance);
-            if (distance < 2f)
-            {
-                tooClose = true;
-            }
-            else
-                tooClose = false;
-        }
-        if (Physics.Raycast(transform.position, Vector3.right, out hit, 40f, mask))
-        {
-            float distance = Vector3.Distance(transform.position, hit.point);
-            Debug.Log(hit.transform.name);
-            Debug.Log(distance);
-            if (distance < 2f)
-            {
-                tooClose = true;
-            }
-            else
-                tooClose = false;
-        }
+        float x = t.x;
+        float y = t.y;
+        float z = t.z;
+        Vector3 move = transform.right * x + transform.up * y + transform.forward * z;
+        characterController.Move(move * speed * Time.deltaTime);
+        //if (tooClose)
+        //{
+        //    float rbSpeeed = 1000f;
+        //    transform.Translate(t * speed * Time.deltaTime);
+        //}
+        //else
+        //    transform.Translate(t * speed * Time.deltaTime);
     }
 }
