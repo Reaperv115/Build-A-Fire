@@ -3,69 +3,51 @@
     "m_SelectedPackage": {
         "deviceId": "RFCRC14DRAL",
         "name": "com.GLITCGaming.BuildAFire",
-        "processId": 10214,
+        "processId": 15006,
         "exited": false
     },
     "m_SelectedPriority": 0,
     "m_KnownPackagesForSerialization": [
         {
             "deviceId": "RFCRC14DRAL",
-            "name": "com.teslacoilsw.launcher",
-            "processId": 7139,
-            "exited": false
-        },
-        {
-            "deviceId": "RFCRC14DRAL",
-            "name": "com.GLITCGaming.BuildAFire",
-            "processId": 17278,
-            "exited": true
-        },
-        {
-            "deviceId": "RFCRC14DRAL",
-            "name": "com.GLITCGaming.BuildAFire",
-            "processId": 18463,
-            "exited": true
-        },
-        {
-            "deviceId": "RFCRC14DRAL",
-            "name": "com.GLITCGaming.BuildAFire",
-            "processId": 19452,
-            "exited": true
-        },
-        {
-            "deviceId": "RFCRC14DRAL",
-            "name": "com.GLITCGaming.BuildAFire",
-            "processId": 20137,
-            "exited": true
-        },
-        {
-            "deviceId": "RFCRC14DRAL",
-            "name": "com.GLITCGaming.BuildAFire",
-            "processId": 22076,
-            "exited": false
-        },
-        {
-            "deviceId": "RFCRC14DRAL",
-            "name": "com.GLITCGaming.BuildAFire",
-            "processId": 4424,
-            "exited": false
-        },
-        {
-            "deviceId": "RFCRC14DRAL",
-            "name": "com.GLITCGaming.BuildAFire",
-            "processId": 6862,
-            "exited": false
-        },
-        {
-            "deviceId": "RFCRC14DRAL",
             "name": "com.GLITCGaming.BuildAFire",
             "processId": 9253,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "RFCRC14DRAL",
             "name": "com.GLITCGaming.BuildAFire",
             "processId": 10214,
+            "exited": true
+        },
+        {
+            "deviceId": "RFCRC14DRAL",
+            "name": "com.GLITCGaming.BuildAFire",
+            "processId": 25008,
+            "exited": true
+        },
+        {
+            "deviceId": "RFCRC14DRAL",
+            "name": "com.GLITCGaming.BuildAFire",
+            "processId": 11662,
+            "exited": true
+        },
+        {
+            "deviceId": "RFCRC14DRAL",
+            "name": "com.teslacoilsw.launcher",
+            "processId": 7758,
+            "exited": false
+        },
+        {
+            "deviceId": "RFCRC14DRAL",
+            "name": "com.GLITCGaming.BuildAFire",
+            "processId": 14292,
+            "exited": false
+        },
+        {
+            "deviceId": "RFCRC14DRAL",
+            "name": "com.GLITCGaming.BuildAFire",
+            "processId": 15006,
             "exited": false
         }
     ],

@@ -10,7 +10,7 @@ public class Burn : MonoBehaviour
 
     GameObject litFire;
 
-    bool isBurning;
+    bool beginBurning;
 
     ParticleSystem.EmissionModule emission;
     ParticleSystem.ShapeModule shape;
@@ -19,6 +19,10 @@ public class Burn : MonoBehaviour
     ParticleSystem.MinMaxCurve firestartlifeTime;
     ParticleSystem.MainModule main;
     RaycastHit hit;
+
+    // tmp variable used for
+    // initially getting the fire started
+    float tmp = 0f;
 
     // Start is called before the first frame update
     void Start()
@@ -29,35 +33,20 @@ public class Burn : MonoBehaviour
         camera = GameObject.Find("Main Camera");
         main = firePS.main;
         heat = main.startLifetime.constant;
+        beginBurning = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (isBurning)
+        if (beginBurning)
         {
-            heat += Time.deltaTime;
-            int tmp = ((int)heat);
-            if ((tmp % 2).Equals(0))
+            Debug.Log(tmp);
+            tmp += Time.deltaTime;
+            main.startLifetime = tmp;
+            if (tmp >= 5f)
             {
-                Debug.Log(main.startLifetime.constant);
-                if (main.startLifetime.constant > 4f)
-                {
-                    this.shape.radius += heat;
-                    if (!Physics.SphereCast(transform.position, shape.radius, Vector3.up, out hit)) return;
-                    else
-                    {
-                        if (hit.transform.tag.Equals("fuel"))
-                        {
-                            IgniteFire(hit.transform.gameObject);
-                        }
-                    }                    
-                }
-                else
-                {
-                    main.startLifetime = heat;
-                    
-                }
+                shape.angle += Time.deltaTime;
             }
         }
     }
@@ -65,11 +54,6 @@ public class Burn : MonoBehaviour
     private void OnParticleCollision(GameObject other)
     {
         IgniteFire(other);   
-    }
-
-    public void SetIsBurning(bool isburning)
-    {
-        isBurning = isburning;
     }
 
     public ParticleSystem.MainModule GetMainPS()
@@ -124,5 +108,10 @@ public class Burn : MonoBehaviour
                     break;
             }
         }
+    }
+
+    public void LightFire()
+    {
+        beginBurning = true;
     }
 }

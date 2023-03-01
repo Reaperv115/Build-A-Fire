@@ -69,15 +69,15 @@ public class SpawnFuel : MonoBehaviour
             {
                 DeactivatingFuelUI();
                 touch = Input.GetTouch(0);
-                if (Physics.Raycast(Camera.main.ScreenPointToRay(touch.position), out hit))
-                {
-                    // checking if you're tapping on fuel and you haven't already lit a fire. cant be setting rock on fire
-                    if (!GameObject.Find("fire(Clone)") && fuel.Count > 0 && hit.transform.tag.Equals("fuel"))
-                    {
-                        litFire = Instantiate(fire, hit.point, fire.transform.rotation, hit.transform);
-                        litFire.GetComponent<Burn>().SetIsBurning(true);
-                    }
-                }
+                //if (Physics.Raycast(Camera.main.ScreenPointToRay(touch.position), out hit))
+                //{
+                //    // checking if you're tapping on fuel and you haven't already lit a fire. cant be setting rock on fire
+                //    if (!GameObject.Find("fire(Clone)") && fuel.Count > 0 && hit.transform.tag.Equals("fuel"))
+                //    {
+                //        litFire = Instantiate(fire, hit.point, fire.transform.rotation, hit.transform);
+                //        litFire.GetComponent<Burn>().SetIsBurning(true);
+                //    }
+                //}
             }
         }
         
