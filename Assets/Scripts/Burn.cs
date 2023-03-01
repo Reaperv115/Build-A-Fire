@@ -42,11 +42,16 @@ public class Burn : MonoBehaviour
         if (beginBurning)
         {
             Debug.Log(tmp);
-            tmp += Time.deltaTime;
             main.startLifetime = tmp;
-            if (tmp >= 5f)
+            if (tmp <= 7f)
+            { 
+                tmp += Time.deltaTime;
+
+            }
+            shape.angle += Time.deltaTime;
+            if ((shape.angle % 4).Equals(0))
             {
-                shape.angle += Time.deltaTime;
+                shape.radius += Time.deltaTime;
             }
         }
     }
