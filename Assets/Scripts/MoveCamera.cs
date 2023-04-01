@@ -12,6 +12,8 @@ public class MoveCamera : MonoBehaviour
     Vector3 touchPosition;
     CharacterController characterController;
 
+    bool foundFire = true;
+
     float zoomSpeed = 0.1f;
     float zoomminBound = 0.1f;
     float zoommaxBound = 40f;
@@ -23,7 +25,6 @@ public class MoveCamera : MonoBehaviour
     }
     void Update()
     {
-        Debug.Log("Close: " + tooClose);
         if (Input.touchCount >= 2)
         {
             Vector2 currtouch0, currtouch1, prevtouch0, prevtouch1;
@@ -59,15 +60,10 @@ public class MoveCamera : MonoBehaviour
             }
         }
 
-
-        
-        
-        transform.LookAt(firePit.transform);
-        
-        Debug.DrawRay(transform.position, Vector3.up * 40f, Color.blue, Mathf.Infinity);
-        Debug.DrawRay(transform.position, Vector3.down * 40f, Color.blue, Mathf.Infinity);
-        Debug.DrawRay(transform.position, Vector3.left * 40f, Color.blue, Mathf.Infinity);
-        Debug.DrawRay(transform.position, Vector3.right * 40f, Color.blue, Mathf.Infinity);
+        if (GameManager.instance.GetFocusCamera())
+        {
+            transform.LookAt(GameManager.instance.GetFireRef().transform);
+        }
     }
 
     // Update is called once per frame
