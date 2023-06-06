@@ -8,11 +8,8 @@ public class MoveCamera : MonoBehaviour
     [SerializeField] GameObject firePit;
     [SerializeField] LayerMask mask;
     bool isMoving = false;
-    bool tooClose;
     Vector3 touchPosition;
     CharacterController characterController;
-
-    bool foundFire = true;
 
     float zoomSpeed = 0.1f;
     float zoomminBound = 0.1f;
@@ -21,10 +18,10 @@ public class MoveCamera : MonoBehaviour
     void Start()
     {
         characterController = GetComponent<CharacterController>();
-        tooClose = false;
     }
     void Update()
     {
+        transform.LookAt(GameManager.instance.GetIgnite().gameObject.transform);
         if (Input.touchCount >= 2)
         {
             Vector2 currtouch0, currtouch1, prevtouch0, prevtouch1;
@@ -58,11 +55,6 @@ public class MoveCamera : MonoBehaviour
                 }
 
             }
-        }
-
-        if (GameManager.instance.GetFocusCamera())
-        {
-            transform.LookAt(GameManager.instance.GetFireRef().transform);
         }
     }
 

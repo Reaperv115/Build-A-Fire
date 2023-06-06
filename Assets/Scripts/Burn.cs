@@ -39,26 +39,7 @@ public class Burn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (beginBurning)
-        {
-            Debug.Log(tmp);
-            main.startLifetime = tmp;
-            if (tmp <= 7f)
-            { 
-                tmp += Time.deltaTime;
-
-            }
-            shape.angle += Time.deltaTime;
-            if ((shape.angle % 4).Equals(0))
-            {
-                shape.radius += Time.deltaTime;
-            }
-        }
-    }
-
-    private void OnParticleCollision(GameObject other)
-    {
-        IgniteFire(other);   
+        
     }
 
     public ParticleSystem.MainModule GetMainPS()

@@ -5,14 +5,15 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    bool focusCamera;
 
     GameObject fireRef;
+    
+    Ignite ignition;
     // Start is called before the first frame update
     void Start()
     {
         instance = this;
-        focusCamera = false;
+        ignition = GameObject.Find("Ignition").GetComponent<Ignite>();
     }
 
     // Update is called once per frame
@@ -24,16 +25,13 @@ public class GameManager : MonoBehaviour
     public void SetFireRef(GameObject fireref)
     {
         fireRef = fireref;
-        if (fireref)
-            focusCamera = true;
     }
     public GameObject GetFireRef()
     {
         return fireRef;
     }
-
-    public bool GetFocusCamera()
+    public Ignite GetIgnite() 
     {
-        return focusCamera;
+        return ignition;
     }
 }
