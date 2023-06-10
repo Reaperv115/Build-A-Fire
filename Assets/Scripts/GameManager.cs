@@ -8,12 +8,12 @@ public class GameManager : MonoBehaviour
 
     GameObject fireRef;
     
-    Ignite ignition;
+    Transform ignition;
     // Start is called before the first frame update
     void Start()
     {
         instance = this;
-        ignition = GameObject.Find("Ignition").GetComponent<Ignite>();
+        ignition = GameObject.Find("Ignition").GetComponent<Transform>();
     }
 
     // Update is called once per frame
@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
     {
         return fireRef;
     }
-    public Ignite GetIgnite() 
+    public Transform GetIgnite() 
     {
         return ignition;
     }

@@ -10,8 +10,6 @@ public class Ignite : MonoBehaviour
     void Start()
     {
         ignition = this.transform;
-        fire = Resources.Load<GameObject>("fire");
-        GameManager.instance.SetFireRef(fire);
     }
 
     // Update is called once per frame

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Burn : MonoBehaviour
 {
@@ -15,31 +16,33 @@ public class Burn : MonoBehaviour
     ParticleSystem.EmissionModule emission;
     ParticleSystem.ShapeModule shape;
     float heat;
-    float heatX, heatY;
     ParticleSystem.MinMaxCurve firestartlifeTime;
     ParticleSystem.MainModule main;
     RaycastHit hit;
 
-    // tmp variable used for
-    // initially getting the fire started
-    float tmp = 0f;
+    float tmpRad;
+    float tmpslT;
+    float tmpsS;
 
     // Start is called before the first frame update
     void Start()
     {
+
+        heat = 0.0f;
+        
         firePS = GetComponent<ParticleSystem>();
-        emission = this.GetComponent<ParticleSystem>().emission;
-        shape = this.GetComponent<ParticleSystem>().shape;
-        camera = GameObject.Find("Main Camera");
         main = firePS.main;
-        heat = main.startLifetime.constant;
-        beginBurning = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+
         
+
+
+
+
     }
 
     public ParticleSystem.MainModule GetMainPS()
@@ -52,52 +55,66 @@ public class Burn : MonoBehaviour
         int collcount = firePS.GetSafeCollisionEventSize();
         collisionEvents = new List<ParticleCollisionEvent>(collcount);
         int eventCount = firePS.GetCollisionEvents(other, collisionEvents);
-        for (int i = 0; i < eventCount; ++i)
-        {
-            switch (other.transform.name)
-            {
-                case "log(Clone)":
-                    {
-                        if (other.GetComponent<LogStats>().CanItBeBurned().Equals(true))
-                        {
-                            other.GetComponent<LogStats>().SetHealth(other.GetComponent<LogStats>().GetHealth() - .00002f);
-                            if (other.GetComponent<LogStats>().GetHealth() <= 0)
-                            {
-                                Destroy(other);
-                            }
-                            if (other.GetComponent<LogStats>().GetHealth() < 80 && other.GetComponent<LogStats>().GetNumFires() > 0)
-                            {
-                                litFire = Instantiate(this.gameObject, collisionEvents[i].intersection, this.transform.rotation, other.transform);
-                                other.GetComponent<LogStats>().SetHealth(other.GetComponent<LogStats>().GetHealth() - .00002f);
-                            }
-                        }
-                        break;
-                    }
-                case "crumbled paper(Clone)":
-                    {
-                        if (other.GetComponent<PaperStats>().CanItBeBurned().Equals(true))
-                        {
-                            other.GetComponent<PaperStats>().SetHealth(other.GetComponent<PaperStats>().GetHealth() - .0002f);
-                            if (other.GetComponent<PaperStats>().GetHealth() <= 0)
-                            {
-                                Destroy(other);
-                            }
-                            if (other.GetComponent<PaperStats>().GetHealth() < 80 && other.GetComponent<PaperStats>().GetNumFires() > 0 && other.GetComponent<PaperStats>().CanItBeBurned().Equals(true))
-                            {
-                                litFire = Instantiate(this.gameObject, collisionEvents[i].intersection, this.transform.rotation, other.transform);
-                                other.GetComponent<PaperStats>().SetHealth(other.GetComponent<PaperStats>().GetHealth() - .0002f);
-                            }
-                        }
-                        break;
-                    }
-                default:
-                    break;
-            }
-        }
+        
     }
 
     public void LightFire()
     {
         beginBurning = true;
+    }
+    public void IncreaseHeat()
+    {
+        heat += .05f;
+        tmpslT = main.startLifetime.constant;
+        tmpslT += Time.deltaTime * heat;
+        print("start life: " + tmpslT);
+        main.startLifetime = tmpslT;
+        if (heat > 1f)
+        {
+            tmpsS = main.startSize.constant;
+            tmpsS += (Time.deltaTime * heat / .5f);
+            print("start size: " + tmpsS);
+            main.startSize = tmpsS;
+        }
+        if (heat > 2f)
+        {
+            var shape = firePS.shape;
+            tmpRad = shape.radius;
+            tmpRad += (Time.deltaTime * heat / .9f);
+            print("radius: " + tmpRad);
+            shape.radius = tmpRad;
+        }
+    }
+    public void DecreaseHeat()
+    {
+        heat -= .001f;
+        tmpslT = main.startLifetime.constant;
+        tmpslT += Time.deltaTime * heat;
+        print("start life: " + tmpslT);
+        main.startLifetime = tmpslT;
+        if (heat > 1f)
+        {
+            tmpsS = main.startSize.constant;
+            tmpsS += (Time.deltaTime * heat / .5f);
+            print("start size: " + tmpsS);
+            main.startSize = tmpsS;
+        }
+        if (heat > 2f)
+        {
+            var shape = firePS.shape;
+            tmpRad = shape.radius;
+            tmpRad += (Time.deltaTime * heat / .9f);
+            print("radius: " + tmpRad);
+            shape.radius = tmpRad;
+        }
+    }
+
+    public void SetHeat(float nHeat)
+    {
+        heat = nHeat;
+    }
+    public float GetHeat()
+    {
+        return heat;
     }
 }
