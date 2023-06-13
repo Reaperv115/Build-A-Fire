@@ -28,6 +28,7 @@ public class PlaceFuel : MonoBehaviour
             case "log(Clone)":
                 {
                     camera.GetComponent<SpawnFuel>().GetFuel().transform.GetComponent<CapsuleCollider>().enabled = true;
+                    camera.GetComponent<SpawnFuel>().GetFuel().GetComponent<LogStats>().SetIsBurning(true);
                     break;
                 }
             case "crumbled paper(Clone)":
