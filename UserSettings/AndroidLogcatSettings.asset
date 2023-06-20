@@ -11,31 +11,31 @@
         {
             "deviceId": "RFCRC14DRAL",
             "name": "com.teslacoilsw.launcher",
-            "processId": 7200,
+            "processId": 7132,
             "exited": false
         },
         {
             "deviceId": "RFCRC14DRAL",
             "name": "com.GLITCGaming.BuildAFire",
-            "processId": 28671,
+            "processId": 1072,
             "exited": true
         },
         {
             "deviceId": "RFCRC14DRAL",
             "name": "com.GLITCGaming.BuildAFire",
-            "processId": 30602,
+            "processId": 3047,
             "exited": true
         },
         {
             "deviceId": "RFCRC14DRAL",
             "name": "com.GLITCGaming.BuildAFire",
-            "processId": 31587,
+            "processId": 9105,
             "exited": true
         },
         {
             "deviceId": "RFCRC14DRAL",
             "name": "com.GLITCGaming.BuildAFire",
-            "processId": 32134,
+            "processId": 10250,
             "exited": true
         }
     ],

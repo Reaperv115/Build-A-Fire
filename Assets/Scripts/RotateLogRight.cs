@@ -21,7 +21,7 @@ public class RotateLogRight : MonoBehaviour, IPointerDownHandler, IPointerUpHand
         Debug.Log(isRotating);
         if (isRotating)
         {
-            buttonsController.GetComponent<ButtonCentral>().GetFuelInst().transform.Rotate(0f, 0f, speed * Time.deltaTime);
+            ResourceManager.Instance.GetInstantiatedFuel().transform.Rotate(0f, 0f, speed * Time.deltaTime);
             
         }
     }

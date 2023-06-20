@@ -4,8 +4,6 @@ using UnityEngine.EventSystems;
 public class RotateLogDown : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
     bool isRotating;
-    [SerializeField]
-    GameObject buttonsController;
 
     float speed = 25f;
     // Start is called before the first frame update
@@ -21,7 +19,7 @@ public class RotateLogDown : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
         Debug.Log(isRotating);
         if (isRotating)
         {
-            buttonsController.GetComponent<ButtonCentral>().GetFuelInst().transform.Rotate(-speed * Time.deltaTime, 0f, 0f);
+            ResourceManager.Instance.GetInstantiatedFuel().transform.Rotate(-speed * Time.deltaTime, 0f, 0f);
             
         }
     }

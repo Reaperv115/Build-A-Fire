@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3634874012858070648}
   - component: {fileID: 4348982424268916083}
   - component: {fileID: 3129027225992129868}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: crumbled paper
   m_TagString: fuel
   m_Icon: {fileID: 0}
@@ -117,7 +117,7 @@ GameObject:
   - component: {fileID: 2946983099662414255}
   - component: {fileID: 5261177751184852629}
   - component: {fileID: 2963574397268332532}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: crumbled paper
   m_TagString: fuel
   m_Icon: {fileID: 0}
@@ -222,7 +222,7 @@ GameObject:
   - component: {fileID: 836358023479689529}
   - component: {fileID: 8322534985137155577}
   - component: {fileID: 4228762838911868096}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: crumbled paper
   m_TagString: fuel
   m_Icon: {fileID: 0}
@@ -327,7 +327,7 @@ GameObject:
   - component: {fileID: 6363358588809324956}
   - component: {fileID: 7120713117545388885}
   - component: {fileID: 5739923699839843217}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: crumbled paper
   m_TagString: fuel
   m_Icon: {fileID: 0}
@@ -432,7 +432,7 @@ GameObject:
   - component: {fileID: 1004766675396326564}
   - component: {fileID: 89990601485336518}
   - component: {fileID: 3095918503062452311}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: crumbled paper
   m_TagString: fuel
   m_Icon: {fileID: 0}
@@ -537,7 +537,7 @@ GameObject:
   - component: {fileID: 2846643626601123422}
   - component: {fileID: 860483688856950256}
   - component: {fileID: 864969884139999270}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: crumbled paper
   m_TagString: fuel
   m_Icon: {fileID: 0}
@@ -642,7 +642,7 @@ GameObject:
   - component: {fileID: 341680873957061277}
   - component: {fileID: 8493394473460814931}
   - component: {fileID: 7211427603692183735}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: crumbled paper
   m_TagString: fuel
   m_Icon: {fileID: 0}
@@ -747,7 +747,7 @@ GameObject:
   - component: {fileID: 1933470152753726343}
   - component: {fileID: 7924306062706778940}
   - component: {fileID: 2701318596966307104}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: crumbled paper
   m_TagString: fuel
   m_Icon: {fileID: 0}
@@ -852,7 +852,7 @@ GameObject:
   - component: {fileID: 5912529616302785411}
   - component: {fileID: 5192557548020984299}
   - component: {fileID: 2562886166176384201}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: crumbled paper
   m_TagString: fuel
   m_Icon: {fileID: 0}
@@ -957,7 +957,7 @@ GameObject:
   - component: {fileID: 6781198261362913577}
   - component: {fileID: 2626382934898851680}
   - component: {fileID: 3849630886032968792}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: crumbled paper
   m_TagString: fuel
   m_Icon: {fileID: 0}
@@ -1062,7 +1062,7 @@ GameObject:
   - component: {fileID: 646156603011284818}
   - component: {fileID: 6210570907097509043}
   - component: {fileID: 8489205149865459423}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: crumbled paper
   m_TagString: fuel
   m_Icon: {fileID: 0}
@@ -1169,7 +1169,7 @@ GameObject:
   - component: {fileID: 4442875222313987367}
   - component: {fileID: -5610155801866535888}
   - component: {fileID: -5452194519575563687}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: crumbled paper
   m_TagString: fuel
   m_Icon: {fileID: 0}
@@ -1308,7 +1308,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &-5452194519575563687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1333,7 +1333,7 @@ GameObject:
   - component: {fileID: 2437271634163157240}
   - component: {fileID: 3010277659917260920}
   - component: {fileID: 1486423703782450591}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: crumbled paper
   m_TagString: fuel
   m_Icon: {fileID: 0}
@@ -1438,7 +1438,7 @@ GameObject:
   - component: {fileID: 3729110643799116861}
   - component: {fileID: 5224177913544169348}
   - component: {fileID: 2053411436152565444}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: crumbled paper
   m_TagString: fuel
   m_Icon: {fileID: 0}
@@ -1543,7 +1543,7 @@ GameObject:
   - component: {fileID: 6445206609707922916}
   - component: {fileID: 3231030824655985330}
   - component: {fileID: 5158963731545228268}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: crumbled paper
   m_TagString: fuel
   m_Icon: {fileID: 0}
@@ -1648,7 +1648,7 @@ GameObject:
   - component: {fileID: 1053456706117261545}
   - component: {fileID: 5394903222573347285}
   - component: {fileID: 4068804407891313658}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: crumbled paper
   m_TagString: fuel
   m_Icon: {fileID: 0}
@@ -1753,7 +1753,7 @@ GameObject:
   - component: {fileID: 726897519582174342}
   - component: {fileID: 8240748837506624912}
   - component: {fileID: 4598155177412344918}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: crumbled paper
   m_TagString: fuel
   m_Icon: {fileID: 0}
@@ -1858,7 +1858,7 @@ GameObject:
   - component: {fileID: 888650169415061361}
   - component: {fileID: 2520549043596965443}
   - component: {fileID: 759275326539186693}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: crumbled paper
   m_TagString: fuel
   m_Icon: {fileID: 0}
@@ -1963,7 +1963,7 @@ GameObject:
   - component: {fileID: 4736682314918783554}
   - component: {fileID: 2415715660641036722}
   - component: {fileID: 530749391521299089}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: crumbled paper
   m_TagString: fuel
   m_Icon: {fileID: 0}
@@ -2068,7 +2068,7 @@ GameObject:
   - component: {fileID: 4037095881076992315}
   - component: {fileID: 6213147417785005298}
   - component: {fileID: 7716057324605197737}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: crumbled paper
   m_TagString: fuel
   m_Icon: {fileID: 0}
@@ -2173,7 +2173,7 @@ GameObject:
   - component: {fileID: 1823859936391361590}
   - component: {fileID: 8777049356585545157}
   - component: {fileID: 8630692845814330976}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: crumbled paper
   m_TagString: fuel
   m_Icon: {fileID: 0}
