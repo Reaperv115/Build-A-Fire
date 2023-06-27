@@ -27,7 +27,6 @@ public class SpawnWood : MonoBehaviour
     {
         woodInst = Instantiate(wood, fuelSpawn.transform.position, wood.transform.rotation);
         ResourceManager.Instance.SetInstantiatedFuel(woodInst);
-        handleFuel.SetIsHandlingFuel(true);
     }
 
     GameObject GetLogInst()

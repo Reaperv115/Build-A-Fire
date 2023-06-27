@@ -27,7 +27,6 @@ public class SpawnPaper : MonoBehaviour
     {
         paperInst = Instantiate(paper, fuelSpawn.transform.position, paper.transform.rotation);
         ResourceManager.Instance.SetInstantiatedFuel(paperInst);
-        handleFuel.SetIsHandlingFuel(true);
     }
 
     GameObject GetPaperInst()

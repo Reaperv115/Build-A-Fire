@@ -8,18 +8,22 @@ public class MoveCamera : MonoBehaviour
     float speed = 10f;
     [SerializeField] GameObject firePit;
     [SerializeField] LayerMask mask;
-    bool isMoving = false;
     Vector3 touchPosition;
     CharacterController characterController;
 
     float zoomSpeed = 0.1f;
     float zoomminBound = 0.1f;
-    float zoommaxBound = 40f;
+    float zoommaxBound = 90f;
+
+
+    bool moveCamera = false;
 
     HandleFuel handleFuel;
+    GameObject adjustCamera;
     // Start is called before the first frame update
     void Start()
     {
+        adjustCamera = GameObject.Find("Move Camera");
         handleFuel = GameObject.Find("UI Canvas").GetComponent<HandleFuel>();
         characterController = GetComponent<CharacterController>();
     }
@@ -28,11 +32,10 @@ public class MoveCamera : MonoBehaviour
         transform.LookAt(GameManager.instance.GetIgnite().gameObject.transform);
         if (IsPointerOverUIObject())
         {
-            print("clicked UI");
         }
         else
         {
-            if (!handleFuel.IsHandlingFuel())
+            if (moveCamera)
             {
                 if (Input.touchCount >= 2)
                 {
@@ -48,9 +51,9 @@ public class MoveCamera : MonoBehaviour
                     GetComponent<Camera>().fieldOfView += deltaDistance * zoomSpeed;
                     GetComponent<Camera>().fieldOfView = Mathf.Clamp(GetComponent<Camera>().fieldOfView, zoomminBound, zoommaxBound);
                     if (GetComponent<Camera>().fieldOfView < zoomminBound)
-                        GetComponent<Camera>().fieldOfView = .1f;
-                    if (GetComponent<Camera>().fieldOfView > 40f)
-                        GetComponent<Camera>().fieldOfView = 40f;
+                        GetComponent<Camera>().fieldOfView = zoomminBound;
+                    if (GetComponent<Camera>().fieldOfView > zoommaxBound)
+                        GetComponent<Camera>().fieldOfView = zoommaxBound;
                 }
                 else
                 {
@@ -58,12 +61,11 @@ public class MoveCamera : MonoBehaviour
                     {
                         if (touch.phase.Equals(TouchPhase.Moved))
                         {
-                            isMoving = true;
                             touchPosition = touch.deltaPosition;
                         }
                         if (touch.phase.Equals(TouchPhase.Ended))
                         {
-                            isMoving = false;
+                            touchPosition = Vector3.zero;
                         }
 
                     }
@@ -84,8 +86,11 @@ public class MoveCamera : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (isMoving)
+        if (moveCamera)
+        {
+            print("moving camera");
             Move(touchPosition);
+        }
     }
 
     void Move(Vector3 t)
@@ -95,5 +100,19 @@ public class MoveCamera : MonoBehaviour
         float z = t.z;
         Vector3 move = transform.right * x + transform.up * y + transform.forward * z;
         characterController.Move(move * speed * Time.deltaTime);
+    }
+
+    public bool GetIsAdjustingCamera()
+    {
+        return moveCamera;
+    }
+
+    public void SetIsAdjustingCamera(bool isadjusting)
+    {
+        moveCamera = isadjusting;
+    }
+    public HandleFuel GetHandleFuel()
+    {
+        return handleFuel;
     }
 }

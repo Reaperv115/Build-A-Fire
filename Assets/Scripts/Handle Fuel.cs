@@ -7,19 +7,23 @@ public class HandleFuel : MonoBehaviour
     bool ishandlingFuel;
     Touch touch;
     float speed = 0.01f;
+    GameObject movefuelBtn;
     // Start is called before the first frame update
     void Start()
     {
+        movefuelBtn = GameObject.Find("Move Fuel");
         ishandlingFuel = false;   
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (touch.tapCount > 0)
+        print(touch.tapCount);
+        if (Input.touchCount > 0)
         {
             if (ishandlingFuel)
             {
+                print(ishandlingFuel);
                 MoveFuel(ResourceManager.Instance.GetInstantiatedFuel());
             }
         }

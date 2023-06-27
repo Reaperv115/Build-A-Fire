@@ -1,9 +1,9 @@
 {
     "m_SelectedDeviceId": "RFCRC14DRAL",
     "m_SelectedPackage": {
-        "deviceId": "",
-        "name": "",
-        "processId": 0,
+        "deviceId": "RFCRC14DRAL",
+        "name": "com.GLITCGaming.BuildAFire",
+        "processId": 11532,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -16,27 +16,39 @@
         },
         {
             "deviceId": "RFCRC14DRAL",
+            "name": "com.sec.android.app.launcher",
+            "processId": 4532,
+            "exited": false
+        },
+        {
+            "deviceId": "RFCRC14DRAL",
             "name": "com.GLITCGaming.BuildAFire",
-            "processId": 1072,
+            "processId": 7975,
             "exited": true
         },
         {
             "deviceId": "RFCRC14DRAL",
             "name": "com.GLITCGaming.BuildAFire",
-            "processId": 3047,
+            "processId": 9176,
             "exited": true
         },
         {
             "deviceId": "RFCRC14DRAL",
             "name": "com.GLITCGaming.BuildAFire",
-            "processId": 9105,
+            "processId": 9748,
             "exited": true
         },
         {
             "deviceId": "RFCRC14DRAL",
             "name": "com.GLITCGaming.BuildAFire",
-            "processId": 10250,
+            "processId": 10852,
             "exited": true
+        },
+        {
+            "deviceId": "RFCRC14DRAL",
+            "name": "com.GLITCGaming.BuildAFire",
+            "processId": 11532,
+            "exited": false
         }
     ],
     "m_Tags": {

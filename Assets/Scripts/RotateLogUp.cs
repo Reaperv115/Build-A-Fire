@@ -16,7 +16,6 @@ public class RotateLogUp : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(isRotating);
         if (isRotating)
         {
             ResourceManager.Instance.GetInstantiatedFuel().transform.Rotate(speed * Time.deltaTime, 0f, 0f);
