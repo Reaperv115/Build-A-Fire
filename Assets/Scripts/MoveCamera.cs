@@ -30,6 +30,8 @@ public class MoveCamera : MonoBehaviour
     void Update()
     {
         transform.LookAt(GameManager.instance.GetIgnite().gameObject.transform);
+
+        // checking to see if a UI element was touched
         if (IsPointerOverUIObject())
         {
         }
@@ -37,6 +39,7 @@ public class MoveCamera : MonoBehaviour
         {
             if (moveCamera)
             {
+                // zooming in and out
                 if (Input.touchCount >= 2)
                 {
                     Vector2 currtouch0, currtouch1, prevtouch0, prevtouch1;
@@ -50,13 +53,19 @@ public class MoveCamera : MonoBehaviour
                     float deltaDistance = oldtouchDistance - newtouchDistance;
                     GetComponent<Camera>().fieldOfView += deltaDistance * zoomSpeed;
                     GetComponent<Camera>().fieldOfView = Mathf.Clamp(GetComponent<Camera>().fieldOfView, zoomminBound, zoommaxBound);
+
+                    // checking to stay inside zoom-in bounds
                     if (GetComponent<Camera>().fieldOfView < zoomminBound)
                         GetComponent<Camera>().fieldOfView = zoomminBound;
+
+                    // checking for zoom-out bounds
                     if (GetComponent<Camera>().fieldOfView > zoommaxBound)
                         GetComponent<Camera>().fieldOfView = zoommaxBound;
                 }
                 else
                 {
+                    // getting the delta position for moving
+                    // the camera
                     foreach (Touch touch in Input.touches)
                     {
                         if (touch.phase.Equals(TouchPhase.Moved))
@@ -86,11 +95,7 @@ public class MoveCamera : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (moveCamera)
-        {
-            print("moving camera");
-            Move(touchPosition);
-        }
+        if (moveCamera) Move(touchPosition);
     }
 
     void Move(Vector3 t)

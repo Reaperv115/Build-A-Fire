@@ -7,7 +7,7 @@ public class RotateLogRight : MonoBehaviour, IPointerDownHandler, IPointerUpHand
     [SerializeField]
     GameObject buttonsController;
 
-    float speed = 25f;
+    float speed = 50f;
     // Start is called before the first frame update
     void Start()
     {

@@ -26,7 +26,10 @@ public class MoveFuel : MonoBehaviour
 
     public void BeginMovingFuel()
     {
-        canvas.GetComponent<HandleFuel>().SetIsHandlingFuel(true);
-        cam.GetComponent<MoveCamera>().SetIsAdjustingCamera(false);
+        if (ResourceManager.Instance.GetInstantiatedFuel())
+        {
+            canvas.GetComponent<HandleFuel>().SetIsHandlingFuel(true);
+            cam.GetComponent<MoveCamera>().SetIsAdjustingCamera(false);
+        }
     }
 }

@@ -5,7 +5,7 @@ public class RotateLogUp : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
     bool isRotating;
 
-    float speed = 25f;
+    float speed = 50f;
     // Start is called before the first frame update
     void Start()
     {

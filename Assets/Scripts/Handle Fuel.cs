@@ -6,7 +6,7 @@ public class HandleFuel : MonoBehaviour
 {
     bool ishandlingFuel;
     Touch touch;
-    float speed = 0.01f;
+    float speed = 0.5f;
     GameObject movefuelBtn;
     // Start is called before the first frame update
     void Start()
@@ -18,15 +18,11 @@ public class HandleFuel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        print(touch.tapCount);
-        if (Input.touchCount > 0)
-        {
+        if (Input.touchCount < 0)
+        { }
+        else
             if (ishandlingFuel)
-            {
-                print(ishandlingFuel);
                 MoveFuel(ResourceManager.Instance.GetInstantiatedFuel());
-            }
-        }
     }
 
     public void SetIsHandlingFuel(bool isHandling)
@@ -43,7 +39,6 @@ public class HandleFuel : MonoBehaviour
         {
             case "log(Clone)":
                 {
-                    print("moving log");
                     touch = Input.GetTouch(0);
                     fuel.transform.position = new Vector3(
                                  fuel.transform.position.x + touch.deltaPosition.x * speed,
@@ -66,7 +61,6 @@ public class HandleFuel : MonoBehaviour
     }
     public void DropFuel()
     {
-        print("drop fuel");
         ResourceManager.Instance.GetInstantiatedFuel().GetComponent<Rigidbody>().useGravity = true;
         ishandlingFuel = false;
         switch (ResourceManager.Instance.GetInstantiatedFuel().transform.name)
